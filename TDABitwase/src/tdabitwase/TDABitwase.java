@@ -7,7 +7,7 @@ import negocio.Bitwase;
 import negocio.ConjuntoBits;
 /**
  *
- * @author Rocka
+ * @author Ricky
  */
 public class TDABitwase {
 
