@@ -5,7 +5,7 @@
 package negocio;
 /**
  *
- * @author Rocka
+ * @author sebas
  */
 public class ConjuntoBits {// atributos
     Bitwase c[];// vector de bitwase   
