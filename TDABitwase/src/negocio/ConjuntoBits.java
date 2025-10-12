@@ -7,8 +7,8 @@ package negocio;
  *
  * @author Rocka
  */
-public class ConjuntoBits {
-    Bitwase c[];// vector de bitwase    //atributos
+public class ConjuntoBits {// atributos
+    Bitwase c[];// vector de bitwase   
     int cant;//cantidad de elementos
     public ConjuntoBits(int NEle){//constructor 
         int Nbw = NEle/32;//Nbw numero de vectores 
