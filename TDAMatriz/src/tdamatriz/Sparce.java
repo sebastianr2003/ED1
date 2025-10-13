@@ -23,7 +23,7 @@ public class Sparce {//atributos
         dim=-1;//posicion en el vector vfc,vd
         e=ele;//elemento dominante     
     }
-    public void setdat(int f,int c,float dato){
+    public void setdato(int f,int c,float dato){
         if((f>0)&&(c>0)&&(f<=m)&&(c<=n)){//dentro del rango de la matriz fmax,cmax
             int fc=(f-1)*n+c;// posicion lineal
             int pos=buscar(fc);//busca la posicion lineal en vd
@@ -85,15 +85,28 @@ public class Sparce {//atributos
         }
         return valor;
     }
+    public void mostrarvector(){//mostrar pòsicion  y dato en vector  lineal
+        for(int i=0;i<=dim;i++){
+            System.out.println("P["+VFC[i]+"]="+VD[i]);
+        }
+    }
     public String ToStringFila(int fila){
         String s="";//cadena vacia
         if((fila>0)&&(fila<=m)){//imprime desde fila 1 a la ultima m
             for (int i=1;i<=n;i++){//imprime toda la columna de fila
-                s=s+"["+getDato(fila,i)+"]";//extrae el dato de cada columna
+                s=s+" | "+getDato(fila,i)+" | ";//extrae el dato de cada columna
             }
         }
         return s; 
 
+    }
+    @Override
+    public String toString(){
+        String s="";
+        for (int i=1;i<=m;i++){//recorre fila a fila
+            s=s+ToStringFila(i)+"\n";//imprime toda la coluna de i fila
+        }
+        return s;
     }
 
     

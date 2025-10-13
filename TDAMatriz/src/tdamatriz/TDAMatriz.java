@@ -20,10 +20,9 @@ public class TDAMatriz {
     public static void main(String[] args) {
         // TODO code application logic here
         Sparce m= new Sparce(3,3,3); 
-        m.setdat(1,1,62);
-        for (int i=1;i<=m.m;i++){//recorre fila a fila
-            System.out.println(m.ToStringFila(i));//imprime toda la coluna de i fila
-        } 
+        m.setdato(1,1,62);
+        m.mostrarvector();
+        System.out.println(m);
     }
     
 }
