@@ -19,7 +19,7 @@ public class Sparce {//atributos
         VFC= new int[10];//tamaño inicial
         VD= new float[10];//tamaño inicial
         n=nc;//numero de columnas
-        n=nf;//numero de filas
+        m=nf;//numero de filas
         dim=-1;//posicion en el vector vfc,vd
         e=ele;//elemento dominante     
     }
@@ -75,6 +75,27 @@ public class Sparce {//atributos
     }
     public float getDato(int f,int c){
         float valor = e;
-        if ((f<0)&&(c<0)&&())
+      if ((f>0)&&(c>0)&&(f<=m)&&(c<=n)){//dentro del rango
+            int pos= buscar((f-1)*n+c);// dentro vfc busca la posicion y devuelve la pos en vfc
+            if (pos!=-1){//si no lo encuentra
+                valor=VD[pos];//lo coloca el dato
+            }
+        }else{
+            System.out.println("Error: Fila y columna fuera de rango");
+        }
+        return valor;
     }
+    public String ToStringFila(int fila){
+        String s="";//cadena vacia
+        if((fila>0)&&(fila<=m)){//imprime desde fila 1 a la ultima m
+            for (int i=0;i<n;i++){//imprime toda la columna de fila
+                s=s+"["+getDato(fila,i+1)+"]";//extrae el dato de cada columna
+            }
+        }
+        return s;
+
+    }
+
+    
+
 }

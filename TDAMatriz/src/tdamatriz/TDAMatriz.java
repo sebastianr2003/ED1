@@ -15,9 +15,9 @@ public class TDAMatriz {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Sparce m= new Sparce(5,6,1);
-        for (int i=0;i<m.m;i++){//recorre fila a fila
-            System.out.println(m.toStringFila(i));//imprime toda la coluna de i fila
+        Sparce m= new Sparce(5,6,1); 
+        for (int i=1;i<m.m;i++){//recorre fila a fila
+            System.out.println(m.ToStringFila(i));//imprime toda la coluna de i fila
         }
     }
     
