@@ -7,6 +7,10 @@ package tdamatriz;
 /**
  *
  * @author sebas
+ * git add . todo la carpeta
+ * git commit -m ""
+ * git push sube
+ * git pull baja
  */
 public class TDAMatriz {
 
