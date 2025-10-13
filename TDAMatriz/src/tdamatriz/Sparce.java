@@ -42,7 +42,7 @@ public class Sparce {//atributos
                     Redimencionar();//agranda el vfc,vd
                     dim++;//aumenta la cantidad e datos
                     VD[dim]=dato;//mete dato
-                    VFC[dim]=(f-1)*n*c;//mete poscion               
+                    VFC[dim]=(f-1)*n+c;//mete poscion               
                 }                
             }
         }else{
@@ -63,8 +63,8 @@ public class Sparce {//atributos
     }
     private  void Redimencionar(){//
         if((dim%9==0)&&(dim!=0)){//dim esta en su poscion final y es distinta de 0 agranda los vectores
-            float  vaux[]=new float[dim+10];
-            System.arraycopy(VD,0,vaux,0,dim+1);
+            float  vaux[]=new float[dim+10];//vector aux de vd mas grande
+            System.arraycopy(VD,0,vaux,0,dim+1);//clona 
             VD=new float[dim+10];
             System.arraycopy(vaux,0,VD,0,dim+1);
             int vfc2[]=new int [dim+10];
@@ -88,11 +88,11 @@ public class Sparce {//atributos
     public String ToStringFila(int fila){
         String s="";//cadena vacia
         if((fila>0)&&(fila<=m)){//imprime desde fila 1 a la ultima m
-            for (int i=0;i<n;i++){//imprime toda la columna de fila
-                s=s+"["+getDato(fila,i+1)+"]";//extrae el dato de cada columna
+            for (int i=1;i<=n;i++){//imprime toda la columna de fila
+                s=s+"["+getDato(fila,i)+"]";//extrae el dato de cada columna
             }
         }
-        return s;
+        return s; 
 
     }
 
