@@ -73,7 +73,7 @@ public class Sparce {//atributos
             System.arraycopy(vfc2,0,VFC,0, dim+1);            
         }
     }
-    public float getDato(int f,int c){
+    public float getDato(int f,int c){//saca dato de posicion 
         float valor = e;
       if ((f>0)&&(c>0)&&(f<=m)&&(c<=n)){//dentro del rango
             int pos= buscar((f-1)*n+c);// dentro vfc busca la posicion y devuelve la pos en vfc
