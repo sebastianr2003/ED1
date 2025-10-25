@@ -39,4 +39,14 @@ public class ListaEnlazadaBasadaEnVectores {//lista de nodos atributos
         ultimoelemento=nuevoindice;//el ultimo nodo es el nuevo indice
         
     }
+    public String imprimirlista(){
+        String s=" ";
+        int actual = primerelemento;//posicion nodo inicial
+        while(actual!=-1){//hasta el ultimo nodo
+            s=s+nodos.get(actual).valor+"->";//del nodo actual saca su valor
+            actual= nodos.get(actual).siguiente;
+        }            
+        s=s+"null";
+        return s;
+    }
 }
