@@ -8,6 +8,26 @@ package Negocio;
  *
  * @author Rocka
  */
-public class Nodo {
-    
+public class Nodo {// el nodo contiene (dato,otro nodo)
+    int dato;
+    Nodo enlace;
+    public Nodo(){
+        this.enlace=null;//empiza apuntado null
+    }
+    public Nodo(int dato,Nodo enlace){//constructor sobrecargado
+        this.dato=dato;//dato
+        this.enlace=enlace;//otro nodo
+    }
+    public void setdato(int dato){//mete dato al nodo
+        this.dato=dato;
+    }
+    public int getdato(){//saca dato del nodo
+        return dato;
+    }
+    public void setenlace(Nodo enlace){//actualizar nodo
+        this.enlace=enlace;
+    }
+    public Nodo getenlace(){//nodo al que apunta
+        return enlace;
+    }            
 }
