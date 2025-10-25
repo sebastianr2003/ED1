@@ -16,10 +16,8 @@ public class TDAListas {
     public static void main(String[] args) {
         // TODO code application logic here
         ListaEnlazadaBasadaEnVectores lista = new ListaEnlazadaBasadaEnVectores();//crea objeto
-        lista.agregarelemento(5);
-        lista.agregarelemento(6);
-        lista.agregarelemento(7);
-        System.out.println(lista.imprimirlista());        
+        lista.agregarelemento(5); 
+        System.out.println(lista.imprimirlista());            
+        //nodo
     }
-    
 }
