@@ -12,7 +12,7 @@ public class Nodo {// el nodo contiene (dato,otro nodo)
     int dato;
     Nodo enlace;
     public Nodo(){
-        this.enlace=null;//empiza apuntado null
+        this.enlace=null;//empieza apuntado null
     }
     public Nodo(int dato,Nodo enlace){//constructor sobrecargado
         this.dato=dato;//dato
@@ -24,7 +24,7 @@ public class Nodo {// el nodo contiene (dato,otro nodo)
     public int getdato(){//saca dato del nodo
         return dato;
     }
-    public void setenlace(Nodo enlace){//actualizar nodo
+    public void setenlace(Nodo enlace){//actualizar nodo siguiente
         this.enlace=enlace;
     }
     public Nodo getenlace(){//nodo al que apunta
