@@ -6,7 +6,7 @@ package Negocio;
 
 /**
  *
- * @author Rocka
+ * @author Rockass
  */
 public class Nodo {// el nodo contiene (dato,otro nodo)
     int dato;
