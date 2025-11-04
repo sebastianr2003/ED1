@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tda.listas;
-import Negocio.ListaEnlazadaBasadaEnVectores;
+import Negocio.Lista;
+//import Negocio.ListaEnlazadaBasadaEnVectores;
 /**
  *
  * @author Rocka
@@ -15,9 +16,14 @@ public class TDAListas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ListaEnlazadaBasadaEnVectores lista = new ListaEnlazadaBasadaEnVectores();//crea objeto
-        lista.agregarelemento(5); 
-        System.out.println(lista.imprimirlista());            
+        //ListaEnlazadaBasadaEnVectores lista = new ListaEnlazadaBasadaEnVectores();//crea objeto
+        //lista.agregarelemento(5); 
+        //System.out.println(lista.imprimirlista());            
         //nodo
+        Lista L=new Lista();
+        L.insertar(5);
+        L.insertar(6);
+        
+        
     }
 }

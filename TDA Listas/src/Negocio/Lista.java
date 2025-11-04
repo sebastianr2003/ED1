@@ -22,10 +22,12 @@ public class Lista {//atributos
             //inserta cabeza
             Nodo p=new Nodo();
             p.setdato(ele);
-            L=p;// nueva cabeza
+            L=p;// nueva cabeza  L->P
             cant ++;// incrementa de 0->1
             return;
         }
+        //SI NO ESTA VACIO
+        //nodo donde quiere insertar
         Nodo Aux=L;
         Nodo Ant=null; 
         while ((Aux !=null)&&(Aux.getdato()<=ele)){//aux no apunte a  null y el eleemento sea menor  o igual a ele
@@ -33,10 +35,10 @@ public class Lista {//atributos
             Aux=Aux.getenlace();            
         }
         if(Ant==null){//si es menor al de la cabeza
-            Nodo p=new Nodo();
-            p.setdato(ele);
-            p.setenlace(L);
-            L=p;
+            Nodo p=new Nodo();//nodo nuevo  
+            p.setdato(ele);//dato
+            p.setenlace(L);//apunta a la cabeza
+            L=p;//el nuevo l es p para que el menor se ala nueva cabezz
             cant++;
             return;
         }
@@ -45,8 +47,27 @@ public class Lista {//atributos
             p.setdato(ele);//p->ele->null
             Ant.setenlace(p);//el nuevo actual ant->p
             p.setenlace(Aux);//p->aux o p->null
-            cant++;
+            cant++; 
         }
     }
-    
+    public void eliminar(int ele){
+        if(!vacia()){//si no esta vacia
+            //crea punteros
+            Nodo Aux=L;
+            Nodo  Ant=null;
+            while ((Aux !=null)&&(Aux.getdato()!=ele)){//se detiene cuando deja de buscar o cuando encuentra
+                Ant =Aux;
+                Aux=Aux.getenlace();
+            }
+            if(Aux!=null){//cuando no lo pillo
+                if(Ant==null){// elimina la cabeza 
+                    L=L.getenlace();
+                    return;
+                }//cuando esta en el cuerpo 
+                Ant.setenlace(Aux.getenlace());
+                cant --;               
+            }
+            
+        }
+    }
 }
