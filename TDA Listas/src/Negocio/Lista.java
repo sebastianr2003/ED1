@@ -62,6 +62,7 @@ public class Lista {//atributos
             if(Aux!=null){//cuando no lo pillo
                 if(Ant==null){// elimina la cabeza 
                     L=L.getenlace();
+                    cant --;
                     return;
                 }//cuando esta en el cuerpo 
                 Ant.setenlace(Aux.getenlace());
@@ -69,5 +70,43 @@ public class Lista {//atributos
             }
             
         }
+    }
+    public boolean Existe(int ele){
+        boolean  x=false;//no existe de base
+        if(!vacia()){//verfica si esta vacia
+            Nodo Aux = L;
+            while ((Aux!=null)&&(Aux.getdato()!=ele)){//navega toda la lista
+                Aux=Aux.getenlace();
+            }
+            if(Aux!=null){//si lo encontro no  devolvera null
+                x=true;//encontrado
+            }                
+        }
+        return x;
+    }
+    public int getdato(int pos){
+        if(pos<=cant){//pos sea menor o igual a la cantidad 
+            Nodo Aux=L;
+            for (int i = 1;i <pos;i++){// i...pos 
+                Aux= Aux.getenlace();//pasa al siguiente nodo
+            }
+            return (Aux.getdato());            //dato del nodo
+        }else{
+            return -1;//si no hay devuelve -1 
+        }
+    }
+    @Override
+    public String toString (){
+        String S="L-> <";//inicio de lista
+        Nodo Aux=L;     //nuevo nodo
+        while (Aux!=null){//si la lista no esta vacia
+            S=S+Aux.getdato();//añade dato a la cadena
+            if(Aux.getenlace()!=null){
+                S=S+",";
+            }
+            Aux=Aux.getenlace();
+        }
+        S=S+">";
+        return S;
     }
 }
