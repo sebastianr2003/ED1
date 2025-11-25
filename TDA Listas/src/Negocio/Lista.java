@@ -109,4 +109,21 @@ public class Lista {//atributos
         S=S+">";
         return S;
     }
+    public void invertirR(){
+        invertirR(L);
+    }
+    private void invertirR(Nodo p){
+        if(p==null){            
+            return;
+        }else{
+            if(p.getenlace()==null){//si esta vacio
+                L=p;//
+            }else{
+                invertirR(p.getenlace());
+                p.getenlace().setenlace(p);
+                p.setenlace(null);
+            }
+        }
+        
+    }
 }

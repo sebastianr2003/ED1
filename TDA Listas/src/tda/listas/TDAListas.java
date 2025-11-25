@@ -23,7 +23,9 @@ public class TDAListas {
         Lista L=new Lista();
         L.insertar(5);
         L.insertar(6);
-        
+        System.out.println(L);
+        L.invertirR();
+        System.out.println(L);
         
     }
 }
